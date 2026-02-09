@@ -32,7 +32,7 @@ export function TaskForm({
 }: TaskFormProps) {
   const [formData, setFormData] = useState({
     title: initialTask?.title || '',
-    description: initialTask?.description || '',
+    notes: initialTask?.notes || '',  // Changed from description to notes
     priority: initialTask?.priority || 'medium',
   })
 
@@ -55,7 +55,7 @@ export function TaskForm({
     e.preventDefault()
 
     // Validate form
-    const validationError = validateTaskForm(formData.title, formData.description)
+    const validationError = validateTaskForm(formData.title, formData.notes)
 
     if (validationError) {
       setFieldErrors({ [validationError.field]: validationError.message })
@@ -65,7 +65,7 @@ export function TaskForm({
     try {
       await onSubmit({
         title: formData.title,
-        description: formData.description || undefined,
+        notes: formData.notes || undefined,  // Changed from description to notes
         priority: formData.priority || 'medium',
       })
     } catch {
@@ -98,28 +98,28 @@ export function TaskForm({
       />
 
       <div>
-        <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-          Description (Optional)
+        <label htmlFor="notes" className="block text-sm font-medium text-slate-light">
+          Notes (Optional)
         </label>
         <textarea
-          id="description"
-          name="description"
-          value={formData.description}
+          id="notes"
+          name="notes"
+          value={formData.notes}
           onChange={handleChange}
-          placeholder="Enter task description"
+          placeholder="Enter task notes"
           disabled={isLoading}
           rows={4}
           className={`
             mt-1 w-full px-4 py-2 border rounded-lg
-            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+            focus:outline-none focus:ring-2 focus:ring-organify-primary focus:border-transparent
             transition-colors
-            ${fieldErrors.description ? 'border-red-300 bg-red-50' : 'border-gray-300'}
+            ${fieldErrors.notes ? 'border-error bg-error/10' : 'border-slate-light'}
           `}
         />
-        {fieldErrors.description && (
-          <p className="text-sm text-red-600 mt-1">{fieldErrors.description}</p>
+        {fieldErrors.notes && (
+          <p className="text-sm text-error mt-1">{fieldErrors.notes}</p>
         )}
-        <p className="text-xs text-gray-500 mt-1">Maximum 1000 characters</p>
+        <p className="text-xs text-slate-light mt-1">Maximum 1000 characters</p>
       </div>
 
       <PrioritySelector

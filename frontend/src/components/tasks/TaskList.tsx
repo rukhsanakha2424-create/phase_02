@@ -37,10 +37,10 @@ export function TaskList({
       {incompleteTasks.length > 0 && (
         <div>
           <div className="mb-3 flex items-center gap-2">
-            <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+            <h2 className="text-sm font-semibold text-slate-light uppercase tracking-wide">
               Active Tasks
             </h2>
-            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700">
+            <span className="rounded-full bg-organify-primary/20 px-2 py-0.5 text-xs font-medium text-organify-primary">
               {incompleteTasks.length}
             </span>
           </div>
@@ -63,10 +63,10 @@ export function TaskList({
       {completedTasks.length > 0 && (
         <div>
           <div className="mb-3 flex items-center gap-2">
-            <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+            <h2 className="text-sm font-semibold text-slate-light uppercase tracking-wide">
               Completed
             </h2>
-            <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+            <span className="rounded-full bg-success/20 px-2 py-0.5 text-xs font-medium text-success">
               {completedTasks.length}
             </span>
           </div>

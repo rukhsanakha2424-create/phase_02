@@ -68,10 +68,10 @@ export function ValueProp({
   ],
 }: ValuePropProps) {
   return (
-    <section className="relative bg-white py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-background py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Subtle background elements */}
-      <div className="absolute top-1/4 -right-40 w-80 h-80 bg-violet/3 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -left-40 w-80 h-80 bg-lime/3 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 -right-40 w-80 h-80 bg-organify-primary/3 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 -left-40 w-80 h-80 bg-organify-accent/3 rounded-full blur-3xl"></div>
 
       <div className="w-full max-w-7xl mx-auto relative z-10 space-y-24">
         {features.map((feature, index) => (
@@ -87,7 +87,7 @@ export function ValueProp({
             >
               {/* Icon with accent */}
               <div className="flex items-center gap-4">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br from-lime to-lime-dark text-white">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br from-organify-accent to-organify-primary text-white">
                   {feature.icon}
                 </div>
               </div>
@@ -106,7 +106,7 @@ export function ValueProp({
               <div>
                 <Link
                   href="#"
-                  className="inline-flex items-center gap-2 text-violet font-semibold hover:text-violet-dark transition-colors group"
+                  className="inline-flex items-center gap-2 text-organify-primary font-semibold hover:text-organify-secondary transition-colors group"
                 >
                   <Button variant="primary">Learn more</Button>
                 </Link>
@@ -121,14 +121,14 @@ export function ValueProp({
             >
               <div className="relative w-full max-w-md">
                 {/* Glow effect */}
-                <div className="absolute -inset-6 bg-gradient-to-br from-violet/20 to-violet/20 rounded-3xl blur-2xl"></div>
+                <div className="absolute -inset-6 bg-gradient-to-br from-organify-primary/20 to-organify-accent/20 rounded-3xl blur-2xl"></div>
 
                 {/* Image placeholder with realistic styling */}
                 <div className="relative bg-slate rounded-2xl overflow-hidden shadow-2xl border border-slate-light/30">
                   {/* Placeholder content - simulates real image */}
                   <div className="aspect-video bg-gradient-to-br from-slate-dark/50 to-slate/50 flex items-center justify-center relative overflow-hidden">
                     {/* Decorative elements */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-violet/10 to-lime/10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-organify-primary/10 to-organify-accent/10"></div>
 
                     {/* Center icon */}
                     <div className="relative z-10 text-center">

@@ -16,7 +16,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Taskie- Todo App',
+  title: 'Organify- Todo App',
   description: 'A modern todo application for task management',
 }
 

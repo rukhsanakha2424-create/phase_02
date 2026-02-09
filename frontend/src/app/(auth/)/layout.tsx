@@ -16,7 +16,7 @@ export default function AuthLayout({
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            Taskie
+            Organify
           </h1>
           <p className="text-gray-600 text-sm mt-2">
             Manage your tasks efficiently

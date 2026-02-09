@@ -19,7 +19,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            Taskie
+            Organify
           </h1>
           <p className="mt-2 text-gray-600">Manage your tasks with ease</p>
         </div>

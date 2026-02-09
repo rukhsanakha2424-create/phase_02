@@ -21,28 +21,41 @@ const config: Config = {
         ],
       },
       colors: {
-        // Design Guide Colors (from design-guide.md)
+        // Organify Brand Colors
+        organify: {
+          primary: {
+            DEFAULT: "#4361ee", // Professional Blue
+            light: "#4895ef",
+            dark: "#3a56d4",
+          },
+          secondary: {
+            DEFAULT: "#3f37c9", // Deep Purple-Blue
+            light: "#560bad",
+            dark: "#2d28a9",
+          },
+          accent: {
+            DEFAULT: "#4cc9f0", // Modern Cyan
+            light: "#72e0f2",
+            dark: "#3da8d6",
+          },
+          neutral: {
+            DEFAULT: "#f8f9fa", // Clean Background
+            light: "#ffffff",
+            dark: "#e9ecef",
+          },
+        },
+        // Productivity-focused colors
         slate: {
-          DEFAULT: "#323843", // Midnight Slate
-          light: "#3d444f",
-          dark: "#252a31",
+          DEFAULT: "#343a40", // Professional Gray
+          light: "#6c757d",
+          dark: "#212529",
         },
-        violet: {
-          DEFAULT: "#c68dff", // Focus Violet
-          light: "#d9a5ff",
-          dark: "#b373e6",
-        },
-        lime: {
-          DEFAULT: "#cbe857", // Momentum Lime
-          dark: "#b3d946",
-        },
-        white: "#f5f5f5", // Paper White
-
         // Semantic colors
-        error: "#ff6b6b",
-        errorLight: "#ff8c8c",
-        warning: "#ffd43b",
-        success: "#cbe857",
+        error: "#e63946",
+        errorLight: "#ff7e8b",
+        warning: "#fca311",
+        success: "#2a9d8f",
+        background: "#f0f2f5", // Clean workspace background
       },
       spacing: {
         "128": "32rem",

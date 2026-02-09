@@ -35,12 +35,12 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-violet text-white hover:bg-violet-dark rounded-md px-4 py-3 gap-2",
-    secondary: "bg-slate-light hover:bg-slate-dark rounded-md px-4 py-3 gap-2",
-    secondary2: "bg-violet-dark hover:bg-violet rounded-md px-4 py-3 gap-2",
-    accent: "bg-lime-dark hover:bg-lime rounded-md px-4 py-3 gap-2",
+      "bg-organify-primary text-white hover:bg-organify-secondary rounded-md px-4 py-3 gap-2 transition-all duration-300 transform hover:scale-105",
+    secondary: "bg-organify-neutral hover:bg-organify-accent rounded-md px-4 py-3 gap-2 text-organify-secondary transition-all duration-300 transform hover:scale-105",
+    secondary2: "bg-organify-secondary hover:bg-organify-accent rounded-md px-4 py-3 gap-2 text-white transition-all duration-300 transform hover:scale-105",
+    accent: "bg-organify-accent hover:bg-organify-primary rounded-md px-4 py-3 gap-2 text-white transition-all duration-300 transform hover:scale-105",
     danger:
-      "bg-error text-white hover:bg-errorLight rounded-md px-4 py-2 gap-2",
+      "bg-error text-white hover:bg-warning rounded-md px-4 py-2 gap-2 transition-all duration-300 transform hover:scale-105",
   };
 
   const widthClass = fullWidth ? "w-full" : "";
@@ -75,9 +75,10 @@ export function Button({
       )}
 
       <div
-        className="font-medium tracking-wider text-[1rem] flex items-center gap-2"
+        className={`font-medium tracking-wider text-[1rem] flex items-center gap-2 ${
+          variant === "secondary" ? "text-organify-secondary" : "text-white"
+        }`}
         style={{
-          color: "#ffffff",
           fontFamily: "'Space Grotesk', sans-serif",
         }}
       >

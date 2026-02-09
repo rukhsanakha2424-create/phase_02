@@ -13,18 +13,27 @@
 
 @layer base {
   :root {
-    /* Colors */
-    --color-slate: #323843;
-    --color-slate-light: #3d444f;
-    --color-slate-dark: #252a31;
-    --color-violet: #e389d5;
-    --color-violet-light: #9d76a5;
-    --color-violet-dark: #601c64;
-    --color-lime: #cbe857;
-    --color-lime-dark: #b3d946;
-    --color-white: #f5f5f5;
-    --color-error: #ff6b6b;
-    --color-warning: #ffd43b;
+    /* Organify Brand Colors */
+    --color-slate: #343a40;
+    --color-slate-light: #6c757d;
+    --color-slate-dark: #212529;
+    --color-organify-primary: #4361ee;
+    --color-organify-primary-light: #4895ef;
+    --color-organify-primary-dark: #3a56d4;
+    --color-organify-secondary: #3f37c9;
+    --color-organify-secondary-light: #560bad;
+    --color-organify-secondary-dark: #2d28a9;
+    --color-organify-accent: #4cc9f0;
+    --color-organify-accent-light: #72e0f2;
+    --color-organify-accent-dark: #3da8d6;
+    --color-neutral: #f8f9fa;
+    --color-neutral-light: #ffffff;
+    --color-neutral-dark: #e9ecef;
+    --color-background: #f0f2f5;
+    --color-error: #e63946;
+    --color-error-light: #ff7e8b;
+    --color-warning: #fca311;
+    --color-success: #2a9d8f;
 
     /* Typography */
     --font-family: var(--font-roboto), var(--font-space-grotesk), -apple-system,
@@ -78,7 +87,7 @@
     font-size: 16px;
     line-height: var(--line-height-normal);
     color: var(--color-slate);
-    background-color: var(--color-white);
+    background-color: var(--color-background);
     transition: background-color var(--transition-base),
       color var(--transition-base);
   }
@@ -123,18 +132,18 @@
   }
 
   a {
-    color: var(--color-violet);
+    color: var(--color-organify-primary);
     text-decoration: none;
     transition: color var(--transition-base);
   }
 
   a:hover {
-    color: var(--color-violet-dark);
+    color: var(--color-organify-primary-dark);
     text-decoration: underline;
   }
 
   a:active {
-    color: var(--color-violet-dark);
+    color: var(--color-organify-primary-dark);
   }
 
   /**
@@ -156,7 +165,7 @@
   input[type="tel"],
   textarea,
   select {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-light);
     color: var(--color-slate);
     border: 1px solid var(--color-slate-light);
     border-radius: 8px;
@@ -175,8 +184,8 @@
   textarea:focus,
   select:focus {
     outline: none;
-    border-color: var(--color-violet);
-    box-shadow: 0 0 0 3px rgba(198, 141, 255, 0.2);
+    border-color: var(--color-organify-primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
   }
 
   /**
@@ -264,7 +273,7 @@
    * Blockquote
    */
   blockquote {
-    border-left: 4px solid var(--color-violet);
+    border-left: 4px solid var(--color-organify-primary);
     padding-left: var(--spacing-base);
     margin-left: 0;
     margin-bottom: var(--spacing-base);
@@ -276,8 +285,8 @@
    * Selection styles
    */
   ::selection {
-    background-color: var(--color-violet);
-    color: var(--color-slate);
+    background-color: var(--color-organify-primary);
+    color: var(--color-neutral-light);
   }
 
   /**
@@ -293,12 +302,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-violet);
+    background: var(--color-organify-primary);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-violet-light);
+    background: var(--color-organify-primary-light);
   }
 }
 
@@ -341,7 +350,7 @@
     @apply inline-flex items-center justify-center
       px-6 py-2 min-h-11
       font-medium
-      text-white bg-violet hover:bg-violet-light active:bg-violet-dark
+      text-white bg-organify-primary hover:bg-organify-primary-light active:bg-organify-primary-dark
       rounded-md
       border-0
       cursor-pointer
@@ -356,8 +365,8 @@
     @apply inline-flex items-center justify-center
       px-6 py-2 min-h-11
       font-medium
-      text-slate bg-white hover:bg-slate-light
-      border border-violet
+      text-organify-secondary bg-neutral hover:bg-neutral-dark
+      border border-organify-primary
       rounded-md
       cursor-pointer
       transition-colors duration-200
@@ -382,7 +391,7 @@
    * Cards
    */
   .card {
-    @apply bg-white rounded-md shadow-md p-6 border border-slate-light;
+    @apply bg-neutral-light rounded-md shadow-md p-6 border border-slate-light;
   }
 
   .card-hover {
@@ -402,9 +411,9 @@
 
   .form-input {
     @apply w-full px-4 py-2 min-h-11
-      bg-white text-slate
+      bg-neutral-light text-slate
       border border-slate-light rounded-md
-      focus:outline-none focus:border-violet focus:ring-2 focus:ring-violet focus:ring-opacity-20
+      focus:outline-none focus:border-organify-primary focus:ring-2 focus:ring-organify-primary focus:ring-opacity-20
       transition-all duration-200;
   }
 
@@ -436,11 +445,11 @@
   }
 
   .alert-success {
-    @apply bg-lime/10 text-lime border border-lime/20;
+    @apply bg-success/10 text-success border border-success/20;
   }
 
   .alert-info {
-    @apply bg-violet/10 text-violet border border-violet/20;
+    @apply bg-organify-primary/10 text-organify-primary border border-organify-primary/20;
   }
 
   /**
@@ -481,7 +490,7 @@
    * Accessibility - Focus visible for keyboard navigation
    */
   .focus-ring {
-    @apply outline-none ring-2 ring-violet ring-offset-2;
+    @apply outline-none ring-2 ring-organify-primary ring-offset-2;
   }
 
   /**

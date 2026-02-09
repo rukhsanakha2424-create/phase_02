@@ -36,7 +36,7 @@ export default function EditTaskPage() {
     const loadTask = async () => {
       setIsLoadingTask(true)
       try {
-        const data = await apiClient.get<Task>(`/api/${user.id}/tasks/${taskId}`)
+        const data = await apiClient.get<Task>(`/api/v1/todos/${taskId}`)
         setTask(data)
       } catch (err) {
         const message = err instanceof Error ? err.message : 'Failed to load task'
@@ -77,7 +77,7 @@ export default function EditTaskPage() {
   const handleSubmit = async (data: CreateTaskRequest) => {
     setIsSubmitting(true)
     try {
-      await updateTask(user.id, taskId, data)
+      await updateTask(taskId, data)
       // Redirect to tasks list on success
       router.push('/tasks')
     } catch {

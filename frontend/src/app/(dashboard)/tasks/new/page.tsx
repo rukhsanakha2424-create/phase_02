@@ -27,7 +27,7 @@ export default function CreateTaskPage() {
   const handleSubmit = async (data: CreateTaskRequest) => {
     setIsSubmitting(true)
     try {
-      await createTask(user.id, data)
+      await createTask(data)
       // Redirect to tasks list on success
       router.push('/tasks')
     } catch {

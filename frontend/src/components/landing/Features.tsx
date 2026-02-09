@@ -77,21 +77,21 @@ export function Features({
     {
       icon: <CheckCircleIcon />,
       number: "1",
-      title: "Capture",
+      title: "Organify",
       description:
         "Instantly capture your thoughts and tasks with a clear, distraction-free interface.",
     },
     {
       icon: <BoltIcon />,
       number: "2",
-      title: "Prioritize",
+      title: "Task Manager",
       description:
         "Our smart prioritization algorithm highlights the one thing that matters today.",
     },
     {
       icon: <LockIcon />,
       number: "3",
-      title: "Complete",
+      title: "Tasks",
       description:
         "Experience the thrill of completion with every finished item and track progress in real time.",
     },

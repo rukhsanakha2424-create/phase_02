@@ -39,7 +39,7 @@ export default function TasksPage() {
 
     const loadTasks = async () => {
       try {
-        await fetchTasks(user.id);
+        await fetchTasks();
       } catch {
         // Error is handled by the hook
       } finally {
@@ -66,7 +66,7 @@ export default function TasksPage() {
 
   const handleDelete = async (taskId: string) => {
     try {
-      await deleteTask(user.id, taskId);
+      await deleteTask(taskId);
     } catch {
       // Error is handled by the hook
     }
@@ -78,10 +78,10 @@ export default function TasksPage() {
       const task = tasks.find((t) => t.id === taskId);
       if (task?.completed) {
         // If already completed, mark as incomplete
-        await incompleteTask(user.id, taskId);
+        await incompleteTask(taskId);
       } else {
         // If not completed, mark as complete
-        await completeTask(user.id, taskId);
+        await completeTask(taskId);
       }
     } catch {
       // Error is handled by the hook
@@ -104,13 +104,13 @@ export default function TasksPage() {
           <h1
             className="text-4xl font-bold"
             style={{
-              color: "#323843",
+              color: "#343a40",
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            Tasks
+            Organify
           </h1>
-          <p className="mt-2 text-gray-600">Organize and track your work</p>
+          <p className="mt-2 text-slate-light">Organize and track your work</p>
         </div>
         <Button
           onClick={handleCreateClick}
@@ -126,33 +126,33 @@ export default function TasksPage() {
       {/* Statistics */}
       {tasks.length > 0 && (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3">
-          <div className="rounded-lg border border-violet-light bg-white p-4">
+          <div className="rounded-lg border border-organify-primary-light bg-neutral-light p-4">
             <div className="flex items-center gap-2">
-              <Circle size={20} className="text-gray-400" />
+              <Circle size={20} className="text-slate-light" />
               <div>
-                <p className="text-sm text-gray-600">Active</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm text-slate-light">Active</p>
+                <p className="text-2xl font-bold text-slate">
                   {incompleteCount}
                 </p>
               </div>
             </div>
           </div>
-          <div className="rounded-lg border border-violet-light bg-white p-4">
+          <div className="rounded-lg border border-organify-primary-light bg-neutral-light p-4">
             <div className="flex items-center gap-2">
-              <CheckCircle2 size={20} className="text-green-600" />
+              <CheckCircle2 size={20} className="text-success" />
               <div>
-                <p className="text-sm text-gray-600">Completed</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm text-slate-light">Completed</p>
+                <p className="text-2xl font-bold text-slate">
                   {completedCount}
                 </p>
               </div>
             </div>
           </div>
           {tasks.length > 0 && (
-            <div className="rounded-lg border border-violet-light bg-white p-4">
+            <div className="rounded-lg border border-organify-primary-light bg-neutral-light p-4">
               <div>
-                <p className="text-sm text-gray-600">Progress</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm text-slate-light">Progress</p>
+                <p className="text-2xl font-bold text-slate">
                   {Math.round((completedCount / tasks.length) * 100)}%
                 </p>
               </div>

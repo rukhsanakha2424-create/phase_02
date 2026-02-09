@@ -1,6 +1,6 @@
-# Taskie Frontend
+# Organify Frontend
 
-A modern React-based frontend for the Taskie todo application, built with Next.js 16+, TypeScript, and Tailwind CSS.
+A modern React-based frontend for the Organify todo application, built with Next.js 16+, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -164,4 +164,4 @@ npm test -- --watch
 
 ## License
 
-This project is part of the Taskie Todo Application.
+This project is part of the Organify Todo Application.
