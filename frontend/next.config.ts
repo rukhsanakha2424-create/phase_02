@@ -1,23 +1,34 @@
-// import type { NextConfig } from 'next'
+// // import type { NextConfig } from 'next'
 
-// const nextConfig: NextConfig = {
-//   reactStrictMode: true,
-//   typescript: {
-//     tsconfigPath: './tsconfig.json',
-//   },
-//   experimental: {
-//     optimizePackageImports: ['better-auth'],
+// // const nextConfig: NextConfig = {
+// //   reactStrictMode: true,
+// //   typescript: {
+// //     tsconfigPath: './tsconfig.json',
+// //   },
+// //   experimental: {
+// //     optimizePackageImports: ['better-auth'],
+// //   },
+// // }
+
+// // export default nextConfig
+
+// // next.config.js
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   turbowarp: {
+//     root: './fronted', // or wherever your frontend is
 //   },
 // }
 
-// export default nextConfig
+// module.exports = nextConfig
 
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  turbowarp: {
-    root: './fronted', // or wherever your frontend is
-  },
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  turbopack: {
+    root: '../'
+  }
 }
 
-module.exports = nextConfig
+export default nextConfig
